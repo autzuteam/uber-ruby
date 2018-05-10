@@ -11,7 +11,7 @@ module Uber
 
     class Trip < Base
       attr_accessor :dropoff, :vehicle_id, :distance, :start_city, :status_changes, :pickup,
-                    :driver_id, :status, :duration, :trip_id
+                    :driver_id, :status, :duration, :trip_id, :fare, :surge_multiplier, :currency_code
 
       def status_changes=(values)
         @status_changes = values.map { |value| Uber::Partner::StatusChange.new value }

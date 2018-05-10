@@ -11,7 +11,7 @@ module Uber
 
     class Payment < Base
       attr_accessor :category, :breakdown, :rider_fees, :event_time, :trip_id, :cash_collected,
-                    :amount, :driver_id, :partner_id, :currency_code
+                    :amount, :driver_id, :partner_id, :currency_code, :payment_id
 
       def event_time
         ::Time.at @event_time
